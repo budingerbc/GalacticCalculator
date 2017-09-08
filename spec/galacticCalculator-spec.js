@@ -22,7 +22,6 @@ describe("GalacticCalculator", function() {
 
   it('should test if the mercury years calculation is accurate', function() {
     expect(calculator.mercuryYears()).toEqual(20);
-    console.log(calculator.mercuryYears());
   });
 
   it('should test if the venus years calculation is accurate', function() {
@@ -36,5 +35,34 @@ describe("GalacticCalculator", function() {
   it('should test if the jupiter years calculation is accurate', function() {
     expect(calculator.jupiterYears()).toEqual(0);
   });
+
+  it('should test for the number of mercury years left based on age and lifespan', function() {
+    expect(calculator.yearsLeftMercury()).toBeGreaterThan(290);
+    expect(calculator.yearsLeftMercury()).toBeLessThan(317);
+  });
+
+  it('should test for the number of venus years left based on age and lifespan', function() {
+    expect(calculator.yearsLeftVenus()).toBeGreaterThan(111);
+    expect(calculator.yearsLeftVenus()).toBeLessThan(123);
+  });
+
+  it('should test for the number of mars years left based on age and lifespan', function() {
+    expect(calculator.yearsLeftMars()).toBeGreaterThan(36);
+    expect(calculator.yearsLeftMars()).toBeLessThan(41);
+  });
+
+  it('should test for the number of jupiter years left based on age and lifespan', function() {
+    expect(calculator.yearsLeftJupiter()).toBeGreaterThan(4);
+    expect(calculator.yearsLeftJupiter()).toBeLessThan(7);
+  });
+
+  it('should test to see if the users age has passed their life expectancy', function() {
+
+    let old = new Date(1900, 0, 1);
+    let dead = new GalacticCalculator(old);
+
+    expect(calculator.isDead()).toEqual(false);
+    expect(dead.isDead()).toEqual(true);
+  })
 
 });
