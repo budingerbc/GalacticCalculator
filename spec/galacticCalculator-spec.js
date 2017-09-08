@@ -2,19 +2,27 @@ import {GalacticCalculator} from './../js/GalacticCalculator.js';
 
 describe("GalacticCalculator", function() {
 
-  let birth;
+  let now;
+  let past;
   let calculator;
 
   beforeEach(function() {
 
-    birth = new Date(1985, 2, 20);
-    calculator = new GalacticCalculator(birth);
+    now = new Date();
+    past = new Date(now.getTime() - (60 * 1000)); //going a minute in the past for testing
+
+    calculator = new GalacticCalculator(past);
 
   });
 
   it('should test if the age in seconds is determined correctly', function() {
-    let now = new Date();
 
-    expect(calculator.ageInSeconds()).toEqual((now.getTime() - calculator.birthday.getTime()) / 1000);
+    expect(calculator.ageInSeconds()).toEqual(60);
   });
+
+  it('should test if the mercury years calculation is accurate', function() {
+    expect(calculator.mercuryYears().toEqual(14);
+  });
+
+
 });
