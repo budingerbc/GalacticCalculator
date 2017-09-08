@@ -18,6 +18,7 @@ _This site will calculate the years a person has lived on different planets in t
 * The number of years left to live on each planet will be calculated based on a random life expectancy value
 
 
+
 ## Setup
 
 * This website will be hosted on GitHub
@@ -30,6 +31,10 @@ _This site will calculate the years a person has lived on different planets in t
 * Bootstrap
 * Javascript
 * JQuery
+* Bower
+* Gulp
+* Jasmine
+* Karma
 
 ### License
 

@@ -1,0 +1,12 @@
+.jumbotron {
+  text-align: center;
+}
+
+.btn {
+  padding: 5px;
+  margin-top: 5px;
+}
+
+#right-align {
+  text-align: right;
+}

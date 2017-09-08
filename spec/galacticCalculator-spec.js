@@ -63,6 +63,6 @@ describe("GalacticCalculator", function() {
 
     expect(calculator.isDead()).toEqual(false);
     expect(dead.isDead()).toEqual(true);
-  })
+  });
 
 });
