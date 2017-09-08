@@ -33,7 +33,9 @@
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.9.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "moment": "^2.18.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/budingerbc/GalacticCalculator.git"
